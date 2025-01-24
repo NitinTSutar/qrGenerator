@@ -28,8 +28,10 @@
              if(qrText.value.length > 0){
                 qrImage.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
                 imgBox.className += "h-[200px]";
+                qrText.ariaPlaceholder = "qrText.value";
+                qrText.value = "";
              }else{
-                
+                qrImage.src="";
              }
              
         }
